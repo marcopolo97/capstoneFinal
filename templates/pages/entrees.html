@@ -1,0 +1,13 @@
+<p>Entrees Are Here!</p>
+
+<ul class="items">
+	{% for entree in entrees %}
+	<li>
+		<p>{{ entree.meat }}</p>
+        <p>{{ entree.side_1 }}</p>
+        <p>{{ entree.side_2 }}</p>
+        <p>{{ entree.price }}</p>
+    </li>
+    <br>
+	{% endfor %}
+</ul>
