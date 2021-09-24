@@ -38,12 +38,12 @@ class Entree(db.Model):
         return '<Entree {}>'.format(self.name)
 
 
-class Dessert(db.Model):
-    __tablename__ = 'desserts'
+class Drink(db.Model):
+    __tablename__ = 'drinks'
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(120))
     price = db.Column(db.String(120))
 
     def __repr__(self):
-        return '<Dessert {}>'.format(self.name)
+        return '<Drinks {}>'.format(self.name)
