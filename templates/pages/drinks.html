@@ -1,10 +1,10 @@
-<p>Desserts are Here!</p>
+<p>Here are the drinks we offer!</p>
 
 <ul class="items">
 	{% for drink in drinks %}
 	<li>
-		<p>{{ drink.name }}</p>
-        <p>{{ drink.price }}</p>
+		<p>Drink: {{ drink.name }}</p>
+        <p>Price: {{ drink.price }}</p>
     </li>
     <br>
 	{% endfor %}
