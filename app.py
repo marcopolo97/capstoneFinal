@@ -5,7 +5,7 @@ from flask_cors import CORS
 #from models import db_setup
 
 app = Flask(__name__)
-db_setup(app)
+#db_setup(app)
 CORS(app)
 
 # # Models.
