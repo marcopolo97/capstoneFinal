@@ -3,7 +3,7 @@ from flask_migrate import Migrate
 import os
 
 db = SQLAlchemy()
-migrate = Migrate()
+#migrate = Migrate()
 
 # setup our database
 
@@ -12,7 +12,7 @@ def db_setup(app):
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.app = app
     db.init_app(app)
-    migrate.init_app(app, db)
+    #migrate.init_app(app, db)
 
 
 # Models.
