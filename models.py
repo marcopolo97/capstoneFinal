@@ -44,7 +44,6 @@ class Dessert(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(120))
     price = db.Column(db.String(120))
-    price2 = db.Column(db.String(120))
 
     def __repr__(self):
         return '<Dessert {}>'.format(self.name)
