@@ -1,6 +1,9 @@
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 database_path = os.environ["DATABASE_URL"]  # or other relevant config var
