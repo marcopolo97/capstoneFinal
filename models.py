@@ -23,3 +23,27 @@ def setup_db(app, database_path=database_path):
 
 # Models.
 #----------------------------------------------------------------------------#
+
+class Entree(db.Model):
+    __tablename__ = 'entrees'
+
+    id = db.Column(db.Integer, primary_key=True)
+    meat = db.Column(db.String(120))
+    side_1 = db.Column(db.String(120))
+    side_2 = db.Column(db.String(120))
+    price = db.Column(db.String(120))
+    
+
+    def __repr__(self):
+        return '<Entree {}>'.format(self.name)
+
+
+class Dessert(db.Model):
+    __tablename__ = 'desserts'
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(120))
+    price = db.Column(db.String(120))
+
+    def __repr__(self):
+        return '<Dessert {}>'.format(self.name)
