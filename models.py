@@ -2,19 +2,16 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 import os
 
+database_path = os.environ.get('DATABASE_URL')
 db = SQLAlchemy()
-#migrate = Migrate()
 
-# setup our database
-
-def db_setup(app):
-    app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get('DATABASE_URL')
+def setup_db(app):
+    app.config["SQLALCHEMY_DATABASE_URI"] = database_path
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.app = app
     db.init_app(app)
+    migrate = Migrate(app, db)
     db.create_all()
-    #migrate.init_app(app, db)
-
 
 # Models.
 #----------------------------------------------------------------------------#
