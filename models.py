@@ -25,7 +25,7 @@ def setup_db(app, database_path=database_path):
 #----------------------------------------------------------------------------#
 
 class Entree(db.Model):
-    __tablename__ = 'Entree'
+    __tablename__ = 'entrees'
 
     id = db.Column(db.Integer, primary_key=True)
     meat = db.Column(db.String(120))
@@ -39,7 +39,7 @@ class Entree(db.Model):
 
 
 class Dessert(db.Model):
-    __tablename__ = 'Dessert'
+    __tablename__ = 'desserts'
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(120))
