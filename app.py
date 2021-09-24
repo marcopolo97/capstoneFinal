@@ -2,10 +2,10 @@ import os
 from flask import Flask, request, abort, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
-from models import db_setup
+from models import setup_db
 
 app = Flask(__name__)
-db_setup(app)
+setup_db(app)
 CORS(app)
 
 # # Models.
