@@ -38,14 +38,23 @@ def get_entrees():
   return render_template('pages/entrees.html', entrees=data), 200
 
 # Route to get Desserts
-@app.route('/desserts', methods=['GET'])
-def get_desserts():
-  
-  desserts = Dessert.query.all()
+@app.route('/drinks', methods=['GET'])
+def get_drinks():
 
+  data = []
+
+  drinks = Drink.query.all()
+
+  for drink in drinks:
+    data.append({
+    'name': drink.name,
+    'price': drink.price
+  })
+
+    print(data)
 
   
-  return render_template('pages/entrees.html', desserts=data), 200
+  return render_template('pages/drinks.html', drinks=data), 200
 
 # Route to add a new Entree
 @app.route('/entrees', methods=['POST'])
