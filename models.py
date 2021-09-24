@@ -8,7 +8,7 @@ migrate = Migrate()
 
 # Path for environmental variable that sets database path
 
-database_path = os.environ.get['DATABASE_URL']
+database_path = os.environ.get('DATABASE_URL')
 
 # setup our database
 
