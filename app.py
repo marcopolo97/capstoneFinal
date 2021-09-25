@@ -35,13 +35,7 @@ def get_entrees():
 
   print(data)
 
-  render_template('pages/entrees.html', entrees=data)
-
-  return jsonify({
-      'success': True,
-      'entrees': data
-      }), 200
-
+  return render_template('pages/entrees.html', entrees=data), 200
 
 # Route to get Desserts
 @app.route('/drinks', methods=['GET'])
