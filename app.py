@@ -61,7 +61,7 @@ def get_drinks(payload):
 # Route to add a new Entree
 @app.route('/entrees', methods=['POST'])
 @requires_auth('post:entrees')
-def add_entree():
+def add_entree(payload):
 
   body = request.get_json()
   print(body)
@@ -91,7 +91,7 @@ def add_entree():
 # Route to update a Entree
 @app.route('/entrees/<int:id>',  methods=['PATCH'])
 @requires_auth('update:entrees')
-def update_entree(id):
+def update_entree(payload, id):
   
   entree = Entree.query.filter(Entree.id == id).one_or_none()
 
@@ -138,7 +138,7 @@ def update_entree(id):
 # Route to delete a Entree
 @app.route('/entrees/<int:id>',  methods=['DELETE'])
 @requires_auth('delete:entrees')
-def delete_entree(id):
+def delete_entree(payload, id):
 
   entree = Entree.query.filter(Entree.id == id).one_or_none()
 
