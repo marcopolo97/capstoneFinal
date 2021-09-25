@@ -35,7 +35,13 @@ def get_entrees():
 
   print(data)
 
-  return render_template('pages/entrees.html', entrees=data), 200
+  render_template('pages/entrees.html', entrees=data)
+
+  return jsonify({
+      'success': True,
+      'drinks': entree.long()
+      }), 200
+
 
 # Route to get Desserts
 @app.route('/drinks', methods=['GET'])
@@ -59,9 +65,29 @@ def get_drinks():
 # Route to add a new Entree
 @app.route('/entrees', methods=['POST'])
 def add_entree():
+  try: 
+    
+    body = request.get_json()
+    
+    new_meat = body.get('meat')
+    new_side1 = body.get('side_1')
+    new_side2 = body.get('side_2')
+    new_price = body.get('price')
+
+    entree = Entree(meat=new_meat, side_1=new_side1, side_2=new_side2, price=new_price)
+
+    entree.insert()
 
 
-  return render_template('pages/entrees.html')
+    return jsonify({
+      'success': True,
+      'drinks': entree.long()
+      }), 200
+
+  except Exception as e:
+    
+    print('Exception is >> ', e)
+    abort(422)
 
 # Route to update a Entree
 @app.route('/entrees/<int:id>',  methods=['PATCH'])
