@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 from models import setup_db
 from auth import AuthError, requires_auth
-from authlib.flask.client import OAuth
+from authlib.integrations.flask_client import OAuth
 
 app = Flask(__name__)
 setup_db(app)
