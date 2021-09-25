@@ -39,7 +39,7 @@ def get_entrees():
 
   return jsonify({
       'success': True,
-      'drinks': entree.long()
+      'entrees': entrees.long()
       }), 200
 
 
