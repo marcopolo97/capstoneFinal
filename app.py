@@ -61,7 +61,7 @@ def get_drinks():
 def add_entree():
 
   body = request.get_json()
-  
+  print(body)
   try: 
     
     
