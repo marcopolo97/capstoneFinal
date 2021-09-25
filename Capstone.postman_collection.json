@@ -1,0 +1,417 @@
+{
+	"info": {
+		"_postman_id": "3ea51ffc-8e55-4ce4-90f8-7e33b5152c0c",
+		"name": "Capstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "public",
+			"item": [
+				{
+					"name": "get entrees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://udacity-food-capstone.herokuapp.com/entrees",
+							"protocol": "https",
+							"host": [
+								"udacity-food-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"entrees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get drinks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://udacity-food-capstone.herokuapp.com/drinks",
+							"protocol": "https",
+							"host": [
+								"udacity-food-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"drinks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add entree",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"meat\": \"Turkey\",\n    \"side_1\": \"Mashed Potatoes\",\n    \"side_2\": \"Green Beans\",\n    \"price\": \"$9.80\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://udacity-food-capstone.herokuapp.com/entrees",
+							"protocol": "https",
+							"host": [
+								"udacity-food-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"entrees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update entree",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://udacity-food-capstone.herokuapp.com/entrees/6",
+							"protocol": "https",
+							"host": [
+								"udacity-food-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"entrees",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete entree",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://udacity-food-capstone.herokuapp.com/entrees/6",
+							"protocol": "https",
+							"host": [
+								"udacity-food-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"entrees",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "owner",
+			"item": [
+				{
+					"name": "get entrees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://udacity-food-capstone.herokuapp.com/entrees",
+							"protocol": "https",
+							"host": [
+								"udacity-food-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"entrees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get drinks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://udacity-food-capstone.herokuapp.com/drinks",
+							"protocol": "https",
+							"host": [
+								"udacity-food-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"drinks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add entree",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"meat\": \"Turkey\",\n    \"side_1\": \"Mashed Potatoes\",\n    \"side_2\": \"Green Beans\",\n    \"price\": \"$9.80\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://udacity-food-capstone.herokuapp.com/entrees",
+							"protocol": "https",
+							"host": [
+								"udacity-food-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"entrees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update entree",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://udacity-food-capstone.herokuapp.com/entrees/6",
+							"protocol": "https",
+							"host": [
+								"udacity-food-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"entrees",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete entree",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://udacity-food-capstone.herokuapp.com/entrees/6",
+							"protocol": "https",
+							"host": [
+								"udacity-food-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"entrees",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlRvazdyRW5DSC1SRWJTanNqemNrcyJ9.eyJpc3MiOiJodHRwczovL2Rldi10NmZwY3E1Ni51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjE0NzM4YjQ0NDY3MmMwMDY5NGQwM2I3IiwiYXVkIjoiZm9vZCIsImlhdCI6MTYzMjYwMDkzOCwiZXhwIjoxNjMyNjA4MTM4LCJhenAiOiJWN1loT0plUEhtVGk3VWl0SkJyVVFjRmNKY1d1MzRpdyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmVudHJlZXMiLCJnZXQ6ZHJpbmtzIiwiZ2V0OmVudHJlZXMiLCJwYXRjaDplbnRyZWVzIiwicG9zdDplbnRyZWVzIl19.UJKLu4iSG7t8xftJLRGYodGInl_CXJM_xtmoW0AXoGnE68n1IS673ulhC7bqKISPBFcBHeZFzr2jX9j-PqSjRzjaAXNI2JyAIxmavXEOCexO4sGQN-2SVrPo_GcNSzNSDTB8xCcedFBpgsgIkO82zX7e-b0aVW-SrcbpfZ2jYPXi3Gv8JR3vaHBcfhRJ-lxSpoQSN7lv6NyP66HOskqLgZMTnY7Aslcci1SDWCr3VXcrD7q5JA3PDsJx6GF6wSJsD-VeBL2lpcyhZzFOxfh4mgBXIJDkZgV8uR9x1-LlQXXlAs2wOGQi_3eOlgSaDA-44Y0vLxVgh3-7YrZO5NUy6g",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "get entrees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://udacity-food-capstone.herokuapp.com/entrees",
+							"protocol": "https",
+							"host": [
+								"udacity-food-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"entrees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get drinks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://udacity-food-capstone.herokuapp.com/drinks",
+							"protocol": "https",
+							"host": [
+								"udacity-food-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"drinks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add entree",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"meat\": \"Turkey\",\n    \"side_1\": \"Mashed Potatoes\",\n    \"side_2\": \"Green Beans\",\n    \"price\": \"$9.80\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://udacity-food-capstone.herokuapp.com/entrees",
+							"protocol": "https",
+							"host": [
+								"udacity-food-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"entrees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update entree",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://udacity-food-capstone.herokuapp.com/entrees/6",
+							"protocol": "https",
+							"host": [
+								"udacity-food-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"entrees",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete entree",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://udacity-food-capstone.herokuapp.com/entrees/6",
+							"protocol": "https",
+							"host": [
+								"udacity-food-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"entrees",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlRvazdyRW5DSC1SRWJTanNqemNrcyJ9.eyJpc3MiOiJodHRwczovL2Rldi10NmZwY3E1Ni51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjE0ZjVlNDVmZTM5YmIwMDY5MWNlM2QzIiwiYXVkIjoiZm9vZCIsImlhdCI6MTYzMjU5MzQ0MywiZXhwIjoxNjMyNjAwNjQzLCJhenAiOiJWN1loT0plUEhtVGk3VWl0SkJyVVFjRmNKY1d1MzRpdyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmRyaW5rcyIsImdldDplbnRyZWVzIl19.O6ob9Edpraj7XPIyanfLeVvdsVKOMJ5XkPIHJ7nwF_qdrAi7pwmQ5MZkwnM83Xw_iNJroBejG2Ik8BU_Pkw7WeAwmdDpX6UzyJCVjpgpkZnk-1yr5DaH0BXIh0QsDyX7X9aq7sClYQ8-JvE8msyLbpWkroPChvzXTvleHElRKYEGEKet3FntzuOFPTHMTlAyjMUg5yFP5T2_01EbhMqmP0PQBY53cAB8P01r4dldUie0PGYkQo5KOvPDTqPp_ebE1NywdYKkx1A1kciublIcWIP03FITILo8BuNvZL7hRppZ6WmBjxb04TLCE7VskY8eRMLi94bfbJMklE-bw1DR8w",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
