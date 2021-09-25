@@ -39,7 +39,7 @@ def get_entrees():
 
   return jsonify({
       'success': True,
-      'entrees': entrees
+      'entrees': data
       }), 200
 
 
