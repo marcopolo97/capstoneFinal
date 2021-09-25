@@ -41,7 +41,7 @@ def get_entrees(payload):
 # Route to get Desserts
 @app.route('/drinks', methods=['GET'])
 @requires_auth('get:drinks')
-def get_drinks():
+def get_drinks(payload):
 
   data = []
 
