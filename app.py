@@ -3,6 +3,7 @@ from flask import Flask, request, abort, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 from models import setup_db
+from auth import AuthError, requires_auth
 
 app = Flask(__name__)
 setup_db(app)
@@ -19,6 +20,7 @@ def index():
 
 # Route to get Entrees 
 @app.route('/entrees', methods=['GET'])
+@requires_auth('get:entrees')
 def get_entrees():
 
   data = []
@@ -39,6 +41,7 @@ def get_entrees():
 
 # Route to get Desserts
 @app.route('/drinks', methods=['GET'])
+@requires_auth('get:drinks')
 def get_drinks():
 
   data = []
@@ -58,6 +61,7 @@ def get_drinks():
 
 # Route to add a new Entree
 @app.route('/entrees', methods=['POST'])
+@requires_auth('post:entrees')
 def add_entree():
 
   body = request.get_json()
@@ -87,6 +91,7 @@ def add_entree():
 
 # Route to update a Entree
 @app.route('/entrees/<int:id>',  methods=['PATCH'])
+@requires_auth('update:entrees')
 def update_entree(id):
   
   entree = Entree.query.filter(Entree.id == id).one_or_none()
@@ -133,6 +138,7 @@ def update_entree(id):
 
 # Route to delete a Entree
 @app.route('/entrees/<int:id>',  methods=['DELETE'])
+@requires_auth('delete:entrees')
 def delete_entree(id):
 
   entree = Entree.query.filter(Entree.id == id).one_or_none()
