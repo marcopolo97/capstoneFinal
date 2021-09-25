@@ -77,7 +77,7 @@ def add_entree():
 
     return jsonify({
       'success': True,
-      #'entree': entree
+      'entree': entree
       }), 200
 
   except Exception as e:
@@ -87,7 +87,50 @@ def add_entree():
 
 # Route to update a Entree
 @app.route('/entrees/<int:id>',  methods=['PATCH'])
-def update_entree():
+def update_entree(id):
+  
+  entree = Entree.query.filter(Entree.id == id).one_or_none()
+
+  if not entree:
+    
+    abort(404)
+    
+  body = request.get_json()
+  
+  try:
+    
+    new_meat = body.get('meat')
+    
+    if new_meat:
+      entree.meat = new_meat
+      
+    new_side1= body.get('side_1')
+    
+    if new_side1:
+      entree.side_1 = new_side1
+
+    new_side2= body.get('side_2')
+    
+    if new_side2:
+      entree.side_2 = new_side2
+
+    new_price= body.get('price')
+    
+    if new_price:
+      entree.price = new_price
+
+    entree.update()
+
+    return jsonify({
+      'success': True,
+      'entree': entree
+      }), 200
+
+  except Exception as e:
+    
+    print('Exception is >> ', e)
+    abort(422)
+
 
   return render_template('pages/entrees.html')
 
