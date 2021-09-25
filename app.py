@@ -168,6 +168,31 @@ def delete_entree(payload, id):
     print('Exception is >> ', e)
     abort(422)
 
+# Error Handling
+
+@app.errorhandler(AuthError)
+def Auth_handle_error(err):
+    response = jsonify(err.error)
+    response.status_code = err.status_code
+    return response
+
+@app.errorhandler(404)
+def not_found(error):
+    return jsonify({
+        "success": False,
+        "error": 404,
+        "message": "Not found"
+        }), 404
+
+@app.errorhandler(422)
+def unprocessable(error):
+    return jsonify({
+        "success": False,
+        "error": 422,
+        "message": "unprocessable"
+    }), 422
+
+
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
