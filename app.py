@@ -75,7 +75,7 @@ def add_entree(entree):
 
     return jsonify({
       'success': True,
-      'entree': entree
+      #'entree': entree
       }), 200
 
   except Exception as e:
