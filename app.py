@@ -20,7 +20,7 @@ def index():
 # Route to get Entrees 
 @app.route('/entrees', methods=['GET'])
 @requires_auth('get:entrees')
-def get_entrees():
+def get_entrees(payload):
 
   data = []
 
