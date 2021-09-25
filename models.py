@@ -32,6 +32,19 @@ class Entree(db.Model):
     side_1 = db.Column(db.String(120))
     side_2 = db.Column(db.String(120))
     price = db.Column(db.String(120))
+        
+
+    def insert(self):
+        db.session.add(self)
+        db.session.commit()
+
+
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    def update(self):
+        db.session.commit()
     
 
     def __repr__(self):
@@ -44,6 +57,19 @@ class Drink(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(120))
     price = db.Column(db.String(120))
+
+
+    def insert(self):
+        db.session.add(self)
+        db.session.commit()
+
+
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    def update(self):
+        db.session.commit()
 
     def __repr__(self):
         return '<Drinks {}>'.format(self.name)
