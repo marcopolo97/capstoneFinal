@@ -60,7 +60,7 @@ def get_drinks():
 @app.route('/entrees', methods=['POST'])
 def add_entree():
 
-  body = request.get_json()
+  body = request.json()
   print(body)
   try: 
     
