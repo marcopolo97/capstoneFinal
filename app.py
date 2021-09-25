@@ -130,7 +130,10 @@ def update_entree(payload, id):
 
     return jsonify({
       'success': True,
-      #'entree': entree
+      'meat': new_meat,
+      'side_1': new_side1,
+      'side_2': new_side2,
+      'price': new_price
       }), 200
 
   except Exception as e:
