@@ -93,7 +93,7 @@ def add_entree(payload):
 
 # Route to update a Entree
 @app.route('/entrees/<int:id>',  methods=['PATCH'])
-@requires_auth('update:entrees')
+@requires_auth('patch:entrees')
 def update_entree(payload, id):
   
   entree = Entree.query.filter(Entree.id == id).one_or_none()
