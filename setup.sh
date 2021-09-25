@@ -3,5 +3,5 @@ export DATABASE_URL='postgres://xtbwrilmveyqnb:172b559c2a88cf51c07460fcd44f24bfa
 export AUTH0_DOMAIN='dev-t6fpcq56.us.auth0.com'
 export ALGORITHMS=['RS256']
 export API_AUDIENCE='food'
-export AUTH0_CLIENT_ID=V7YhOJePHmTi7UitJBrUQcFcJcWu34iw
-export AUTH0_CLIENT_SECRET= eJqC5lnWuUyBDx2DzCNrLZhZaALQpfv7IdP8eve6to1GvqCjhFu8AjXzP5p_LmvT
+export AUTH0_CLIENT_ID='V7YhOJePHmTi7UitJBrUQcFcJcWu34iw'
+export AUTH0_CLIENT_SECRET= 'eJqC5lnWuUyBDx2DzCNrLZhZaALQpfv7IdP8eve6to1GvqCjhFu8AjXzP5p_LmvT'

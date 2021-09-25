@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 from models import setup_db
 from auth import AuthError, requires_auth
+from authlib.flask.client import OAuth
 
 app = Flask(__name__)
 setup_db(app)
@@ -13,6 +14,19 @@ CORS(app)
 
 from models import *
 
+AUTH0_CLIENT_ID = os.environ.get('AUTH0_CLIENT_ID')
+AUTH0_CLIENT_SECRET = os.environ('AUTH0_CLIENT_SECRET')
+AUTH0_DOMAIN = os.environ.get('AUTH0_DOMAIN')
+API_AUDIENCE = 'food'
+
+
+oauth = OAuth(app)
+
+auth0 = oauth.register(
+  'auth0',
+  client_id=AUTH0_CLIENT_ID,
+  client_secret=AUTH0_CLIENT_SECRET,
+    )
 
 @app.route('/')
 def index():
