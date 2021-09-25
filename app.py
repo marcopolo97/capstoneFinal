@@ -59,9 +59,11 @@ def get_drinks():
 # Route to add a new Entree
 @app.route('/entrees', methods=['POST'])
 def add_entree():
+
+  body = request.get_json()
+  
   try: 
     
-    body = request.get_json()
     
     new_meat = body.get('meat')
     new_side1 = body.get('side_1')
