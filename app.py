@@ -63,8 +63,6 @@ def get_drinks(payload):
 @requires_auth('post:entrees')
 def add_entree(payload):
 
-  data = []
-
   body = request.get_json()
   print(body)
   try: 
@@ -79,18 +77,13 @@ def add_entree(payload):
 
     entree.insert()
 
-    for entree in entrees:
-      data.append({
-      'meat': entree.meat,
-      'side_1': entree.side_1,
-      'side_2': entree.side_2,
-      'price': entree.price
-  })
-
 
     return jsonify({
       'success': True,
-      'entree': data
+      'meat': new_meat,
+      'side_1': new_side1,
+      'side_2': new_side2,
+      'price': new_price
       }), 200
 
   except Exception as e:
