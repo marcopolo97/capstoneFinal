@@ -131,14 +131,32 @@ def update_entree(id):
     print('Exception is >> ', e)
     abort(422)
 
-
-  return render_template('pages/entrees.html')
-
 # Route to delete a Entree
 @app.route('/entrees/<int:id>',  methods=['DELETE'])
-def delete_entree():
+def delete_entree(id):
 
-  return render_template('pages/entrees.html')
+  entree = Entree.query.filter(Entree.id == id).one_or_none()
+
+  if not entree:
+    
+    abort(404)
+    
+  body = request.get_json()
+
+  try:
+    
+    entree.delete()
+
+    return jsonify({
+        'success': True,
+        'delete': id
+    }), 200
+    
+  except Exception as e:
+    
+    print('Exception is >> ', e)
+    abort(422)
+
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
